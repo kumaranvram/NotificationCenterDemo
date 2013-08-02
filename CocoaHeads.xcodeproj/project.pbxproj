@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA44616417AC152100275DFE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA44616317AC152100275DFE /* AVFoundation.framework */; };
+		EA44616617AC156B00275DFE /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA44616517AC156B00275DFE /* Growl.framework */; };
+		EA44616817AC165900275DFE /* Growl Registration Ticket.growlRegDic in Resources */ = {isa = PBXBuildFile; fileRef = EA44616717AC165900275DFE /* Growl Registration Ticket.growlRegDic */; };
+		EA44616917AC16FF00275DFE /* Growl Registration Ticket.growlRegDic in Sources */ = {isa = PBXBuildFile; fileRef = EA44616717AC165900275DFE /* Growl Registration Ticket.growlRegDic */; };
 		EA92C82517A84B4300573B51 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA92C82417A84B4300573B51 /* Cocoa.framework */; };
 		EA92C82F17A84B4300573B51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA92C82D17A84B4300573B51 /* InfoPlist.strings */; };
 		EA92C83117A84B4300573B51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA92C83017A84B4300573B51 /* main.m */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA44616117AC150900275DFE /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = ../../../../Library/Frameworks/Growl.framework; sourceTree = "<group>"; };
+		EA44616317AC152100275DFE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EA44616517AC156B00275DFE /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = ../../Desktop/Growl.framework; sourceTree = "<group>"; };
+		EA44616717AC165900275DFE /* Growl Registration Ticket.growlRegDic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDic"; sourceTree = "<group>"; };
 		EA92C82117A84B4300573B51 /* CocoaHeads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaHeads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA92C82417A84B4300573B51 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EA92C82717A84B4300573B51 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -38,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA44616617AC156B00275DFE /* Growl.framework in Frameworks */,
+				EA44616417AC152100275DFE /* AVFoundation.framework in Frameworks */,
 				EA92C82517A84B4300573B51 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,6 +58,10 @@
 		EA92C81817A84B4300573B51 = {
 			isa = PBXGroup;
 			children = (
+				EA44616717AC165900275DFE /* Growl Registration Ticket.growlRegDic */,
+				EA44616517AC156B00275DFE /* Growl.framework */,
+				EA44616317AC152100275DFE /* AVFoundation.framework */,
+				EA44616117AC150900275DFE /* Growl.framework */,
 				EAA1254417A94E9D00EFE1CC /* coffee-icon.png */,
 				EA92C82A17A84B4300573B51 /* CocoaHeads */,
 				EA92C82317A84B4300573B51 /* Frameworks */,
@@ -159,6 +173,7 @@
 				EA92C83517A84B4300573B51 /* Credits.rtf in Resources */,
 				EA92C83B17A84B4300573B51 /* MainMenu.xib in Resources */,
 				EAA1254517A94E9D00EFE1CC /* coffee-icon.png in Resources */,
+				EA44616817AC165900275DFE /* Growl Registration Ticket.growlRegDic in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA44616917AC16FF00275DFE /* Growl Registration Ticket.growlRegDic in Sources */,
 				EA92C83117A84B4300573B51 /* main.m in Sources */,
 				EA92C83817A84B4300573B51 /* AppDelegate.m in Sources */,
 			);
@@ -267,6 +283,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Desktop\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaHeads/CocoaHeads-Prefix.pch";
 				INFOPLIST_FILE = "CocoaHeads/CocoaHeads-Info.plist";
@@ -279,6 +299,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Desktop\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaHeads/CocoaHeads-Prefix.pch";
 				INFOPLIST_FILE = "CocoaHeads/CocoaHeads-Info.plist";

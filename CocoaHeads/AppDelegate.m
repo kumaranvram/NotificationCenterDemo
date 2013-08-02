@@ -10,16 +10,30 @@
 
 @implementation AppDelegate
 
+- (void)awakeFromNib
+{
+    [GrowlApplicationBridge setGrowlDelegate:self];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
     [self setClickCount:[NSNumber numberWithInt:0]];
+    [GrowlApplicationBridge setGrowlDelegate:self];
 }
 
 -(IBAction) incrementValue:(id)sender {
     NSLog(@"Clicked Increment");
     int value = [_clickCount intValue] + 1;
     [self setClickCount:[NSNumber numberWithInt:value]];
+    [GrowlApplicationBridge notifyWithTitle:@"A notification"
+                                description:@"A short description of the notification"
+                           notificationName:@"growlNotificationKey"
+                                   iconData:nil
+                                   priority:0
+                                   isSticky:NO
+                               clickContext:nil];
+
     if (value % 5 == 0 && value != 0) {
         [self sendNotification:value];
     }
@@ -47,4 +61,10 @@
 - (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification{
     return YES;
 }
+
+-(void)growlNotificationWasClicked:(id)clickContext {
+    NSLog(@"Growl notification was clicked");
+}
+
+
 @end

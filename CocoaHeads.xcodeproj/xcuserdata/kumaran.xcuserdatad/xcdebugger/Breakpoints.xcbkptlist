@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CocoaHeads/AppDelegate.m"
-         timestampString = "396982728.490538"
+         timestampString = "397154633.909546"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "20"
-         endingLineNumber = "20"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
          landmarkName = "-incrementValue:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CocoaHeads/AppDelegate.m"
-         timestampString = "396982746.894642"
+         timestampString = "397154633.909546"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
+         startingLineNumber = "28"
+         endingLineNumber = "28"
          landmarkName = "-incrementValue:"
          landmarkType = "5">
       </FileBreakpoint>
